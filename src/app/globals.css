@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Move CSS variables to the top level */
+:root {
+  --radius: 0.625rem;
+
+  /* Light theme Wolf & Pup colors */
+  --background: 50, 25%, 97%;
+  --foreground: 46, 20%, 20%;
+
+  /* Card colors */
+  --card: 46, 10%, 99%;
+  --card-foreground: 46, 20%, 20%;
+
+  /* Popover colors */
+  --popover: 46, 10%, 99%;
+  --popover-foreground: 46, 20%, 20%;
+
+  /* Primary: Wolf Gray */
+  --primary: 202, 15%, 47%;
+  --primary-foreground: 0, 0%, 100%;
+
+  /* Secondary: Pup Orange */
+  --secondary: 35, 76%, 61%;
+  --secondary-foreground: 0, 0%, 100%;
+
+  /* Muted colors */
+  --muted: 20, 20%, 92%;
+  --muted-foreground: 20, 10%, 40%;
+
+  /* Accent: Wolf Green */
+  --accent: 105, 22%, 51%;
+  --accent-foreground: 0, 0%, 100%;
+
+  /* Destructive/Alert colors */
+  --destructive: 0, 84%, 60%;
+  --destructive-foreground: 0, 0%, 100%;
+
+  /* Borders and inputs */
+  --border: 20, 10%, 85%;
+  --input: 20, 10%, 85%;
+  --ring: 20, 10%, 40%;
+
+  /* Specific brand color mappings for direct use */
+  --wolf-brown: 27, 25%, 35%;
+  --wolf-gray: 202, 15%, 47%;
+  --wolf-green: 105, 22%, 51%;
+  --pup-orange: 35, 76%, 61%;
+  --pup-green: 80, 32%, 70%;
+  --pup-pink: 18, 45%, 86%;
+}
+
+/* Debug style to see if variables resolve correctly */
+.debug-bg {
+  /* This should compute to hsl(50 25% 97%) if variables work */
+  background-color: hsl(var(--background));
+  padding: 1rem;
+  border: 2px solid red;
+  color: black;
+}
+
+/* Optional extra debug classes using theme colors */
+.debug-bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.debug-bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+
+.debug-bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+/* Your existing base layer */
+@layer base {
+  /* Dark theme (if applied) and other global styles */
+
+  .dark {
+    --background: 28, 25%, 15%;
+    --foreground: 35, 20%, 90%;
+    /* ... other dark mode variables ... */
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: CHAROE, var(--font-geist-sans);
+  }
+}
+
+/* Custom styles can be added here */
