@@ -1,35 +1,52 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type React from "react"
+import type { Metadata } from "next"
+// import { GeistSans } from "geist/font/sans"
+import localFont from "next/font/local"
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Header } from "../components/layout/header"
+import { Footer } from "../components/layout/footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const charoeFont = localFont({
+  src: "../fonts/charoe.woff2",
+  variable: "--font-charoe",
+  display: "swap",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const heyComicFont = localFont({
+  src: "../fonts/hey-comic.woff2",
+  variable: "--font-hey-comic",
+  display: "swap",
+})
+
+const singlongFont = localFont({
+  src: "../fonts/singlong.woff2",
+  variable: "--font-singlong",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: "Wolf & Pup | Coffee Shop & Community Space",
+  title: "Wolf & Pup Coffee Shop",
   description: "A community-focused coffee shop with workspaces, play areas for kids and pets, and event spaces.",
-  keywords: ["coffee shop", "community space", "workspace", "kid-friendly", "pet-friendly", "events"],
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
+        className={`${charoeFont.variable} ${heyComicFont.variable} ${singlongFont.variable} font-sans min-h-screen flex flex-col`}
       >
-        {children}
+        <ThemeProvider defaultTheme="light" storageKey="wolf-and-pup-theme">
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+
