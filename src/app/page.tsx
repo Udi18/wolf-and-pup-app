@@ -92,5 +92,3 @@ export default function Home() {
     </main>
   );
 }
-  git config --global user.email "ylevy00@gmail.com"
-  git config --global user.name "Udi Levy"
