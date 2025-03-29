@@ -57,3 +57,8 @@ Wolf & Pup is a community-focused coffee shop that integrates workspaces, play a
 - `src/app/` - Next.js App Router pages
 - `src/components/` - React components (UI components in `ui/`)
 - `src/lib/` - Utility functions and shared logic
+
+## Agent Interaction Guidelines
+- Proceed step-by-step, clearly outlining each action.
+- Confirm all information and text additions with the user before proceeding.
+- Regularly check in with the user to validate progress and gather feedback.
