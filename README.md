@@ -4,8 +4,13 @@ Wolf & Pup is a community-focused coffee shop app built with Next.js, React, and
 
 ## Key Features
 - **Home Page**: Showcases brand, services, and call-to-actions
-- **About Section**: Integrated into homepage
-- **Events Calendar**: Displays upcoming community workshops and events
+- **About Us**: Detailed company story and vision
+- **Cafe**: Menu information and offerings
+- **Work**: Information about workspace areas, phone rooms, meeting spaces
+- **Play (The Glades)**: Waiver information, admission details, and memberships
+- **Membership**: Pricing details, membership benefits, and tiers
+- **Calendar**: Displays upcoming community workshops and events
+- **Party**: Information on party packages and booking options
 - **Contact Page**: Allows customers to reach out via a form
 - **Newsletter Signup**: Captures emails for marketing campaigns
 - **Dark Mode & Theming**: Custom branding with fast color updates

@@ -11,9 +11,13 @@ import { useMobile } from "@/hooks/use-mobile"
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
-  { label: "Menu", href: "/#menu" },
-  { label: "Events", href: "/events" },
+  { label: "About Us", href: "/#about" },
+  { label: "Cafe", href: "/#cafe" },
+  { label: "Work", href: "/#work" },
+  { label: "The Glades", href: "/#play" },
+  { label: "Membership", href: "/#membership" },
+  { label: "Calendar", href: "/events" },
+  { label: "Party", href: "/#party" },
   { label: "Contact", href: "/contact" },
 ]
 
