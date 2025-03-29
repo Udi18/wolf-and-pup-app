@@ -23,7 +23,7 @@ export function NewsletterSection() {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setIsSuccess(true)
       setEmail("")
-    } catch {
+    } catch (err) {
       setError("Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
