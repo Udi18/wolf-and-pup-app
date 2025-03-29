@@ -11,20 +11,18 @@ export function NewsletterSection() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError("")
 
     // Simulate API call
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setIsSuccess(true)
       setEmail("")
-    } catch (err) {
-      setError("Something went wrong. Please try again.")
+    } catch (/* err */ error) {
+      // setError("Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
@@ -59,7 +57,6 @@ export function NewsletterSection() {
               </CustomButton>
             </form>
           )}
-          {error && <p className="mt-2 text-red-300">{error}</p>}
         </div>
       </div>
     </section>

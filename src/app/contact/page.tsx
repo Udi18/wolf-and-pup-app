@@ -41,7 +41,7 @@ export default function ContactPage() {
         subject: "",
         message: "",
       })
-    } catch (err) {
+    } catch (error) {
       setError("Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -57,7 +57,7 @@ export default function ContactPage() {
               Get in <span className="text-primary">Touch</span>
             </h1>
             <p className="mt-4 text-xl text-muted-foreground">
-              Have questions or feedback? We'd love to hear from you.
+              Have questions or feedback? We&apos;d love to hear from you.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle>Send Us a Message</CardTitle>
                   <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&apos;ll get back to you as soon as possible.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

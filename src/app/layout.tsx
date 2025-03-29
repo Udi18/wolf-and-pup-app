@@ -1,31 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
-// import { GeistSans } from "geist/font/sans"
+// Using Next.js default font until Geist is installed
+import { Inter } from 'next/font/google'
 import "./globals.css"
 import { ThemeProvider } from "../components/theme-provider"
 import { Header } from "../components/layout/header"
 import { Footer } from "../components/layout/footer"
 
-// Mock fonts for the example
-// const localFont = require("next/font/local")
+const inter = Inter({ subsets: ['latin'], variable: '--font-geist-sans' })
 
-// const charoeFont = localFont({
-//   src: "../fonts/charoe.woff2",
-//   variable: "--font-charoe",
-//   display: "swap",
-// })
+// Define font variables that are used in CSS
+const charoeFont = {
+  variable: "--font-charoe",
+}
 
-// const heyComicFont = localFont({
-//   src: "../fonts/hey-comic.woff2",
-//   variable: "--font-hey-comic",
-//   display: "swap",
-// })
+const heyComicFont = {
+  variable: "--font-hey-comic",
+}
 
-// const singlongFont = localFont({
-//   src: "../fonts/singlong.woff2",
-//   variable: "--font-singlong",
-//   display: "swap",
-// })
+const singlongFont = {
+  variable: "--font-singlong",
+}
 
 export const metadata: Metadata = {
   title: "Wolf & Pup Coffee Shop",
@@ -40,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`font-sans min-h-screen flex flex-col`}
+        className={`${inter.variable} ${charoeFont.variable} ${heyComicFont.variable} ${singlongFont.variable} font-sans min-h-screen flex flex-col`}
       >
         <ThemeProvider defaultTheme="light" storageKey="wolf-and-pup-theme">
           <Header />
